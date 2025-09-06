@@ -1,12 +1,94 @@
-# React + Vite
+# Doctor Booking System - Admin Panel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the admin and doctor panel of the Doctor Booking System. It is built with React and Vite.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project provides two interfaces:
+- **Admin Interface:** For managing doctors, and viewing all appointments and patients.
+- **Doctor Interface:** For doctors to manage their appointments, and view their earnings and profile.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Admin
+- Dashboard with an overview of total doctors, appointments, and patients.
+- View a list of all appointments with the ability to cancel them.
+- Add new doctors to the system.
+- View a list of all doctors.
+
+### Doctor
+- Dashboard with an overview of total earnings, appointments, and patients.
+- View a list of their appointments with the ability to mark them as complete or cancel them.
+- Manage their profile.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/doctor-booking-system.git
+   ```
+2. Navigate to the admin directory:
+   ```bash
+   cd doctor-booking-system/admin
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in the development mode.
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.
+
+### `npm run lint`
+
+Lints the project files.
+
+### `npm run preview`
+
+Previews the production build.
+
+## Dependencies
+
+- [axios](https://axios-http.com/)
+- [react](https://reactjs.org/)
+- [react-dom](https://reactjs.org/docs/react-dom.html)
+- [react-router-dom](https://reactrouter.com/)
+- [react-toastify](https://fkhadra.github.io/react-toastify/introduction)
+
+## Folder Structure
+
+```
+/src
+|-- /assets
+|-- /components
+|   |-- Navbar.jsx
+|   `-- Sidebar.jsx
+|-- /context
+|   |-- AdminContext.jsx
+|   |-- AppContext.jsx
+|   `-- DoctorContext.jsx
+|-- /pages
+|   |-- Login.jsx
+|   |-- /Admin
+|   |   |-- AddDoctor.jsx
+|   |   |-- AllAppointments.jsx
+|   |   |-- Dashboard.jsx
+|   |   `-- DoctorsList.jsx
+|   `-- /Doctor
+|       |-- DoctorAppointments.jsx
+|       |-- DoctorDashboard.jsx
+|       `-- DoctorProfile.jsx
+|-- App.jsx
+|-- index.css
+`-- main.jsx
+```
